@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "FeatureMapper — Attack Surface Recon",
+  "version": "0.1.0",
+  "description": "Automatically maps every feature of the web app you browse into a live, nested tree for bug-bounty recon. Export as a Markdown checklist or JSON.",
+  "permissions": ["storage"],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle",
+      "all_frames": false
+    }
+  ],
+  "action": {
+    "default_title": "FeatureMapper — toggle panel"
+  },
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "featuremapper@recon.tools",
+      "strict_min_version": "115.0"
+    }
+  }
+}
