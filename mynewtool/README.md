@@ -1,17 +1,17 @@
-# FeatureMapper — Attack Surface Recon
+# FeatureMapper  Attack Surface Recon
 
-A browser extension for bug-bounty hunters. **Just browse the target app** — FeatureMapper
+A browser extension for bug-bounty hunters. **Just browse the target app**  FeatureMapper
 watches the page and automatically builds a **live, nested tree of every feature** you touch:
-nav items, tabs, order-type toggles, buttons, form inputs, dropdown menu items — organized
+nav items, tabs, order-type toggles, buttons, form inputs, dropdown menu items  organized
 exactly like the app's UI hierarchy (`Copy Trading → Plaza → Leaderboard → Copy button`).
 
 No manual note-taking. Export the whole map as a **Markdown checklist** or **JSON** when done.
 
 ## What counts as a "feature"
 
-- **Pages / routes** you visit (incl. SPA route changes) — the top level.
-- **Sections** — nav bars, forms, dialogs/modals, tab groups, dropdown menus, panels.
-- **Controls** — links, buttons, tabs, menu items, inputs, checkboxes, toggles, selects.
+- **Pages / routes** you visit (incl. SPA route changes)  the top level.
+- **Sections**  nav bars, forms, dialogs/modals, tab groups, dropdown menus, panels.
+- **Controls**  links, buttons, tabs, menu items, inputs, checkboxes, toggles, selects.
 
 Everything nests: a control lives under its section, a section under its page. Features within
 features, mirroring what you see on screen.
@@ -22,15 +22,15 @@ features, mirroring what you see on screen.
   menus/modals that open on interaction get captured too).
 - **Live side panel** (docked right). Toggle with the 🎯 launcher (bottom-right).
 - **Hover a node → the element highlights on the page**; click → scrolls to it.
-- **👁 Reveal Hidden** (optional, one click, reversible) — force-shows `display:none` /
+- **👁 Reveal Hidden** (optional, one click, reversible)  force-shows `display:none` /
   `[hidden]` / `visibility:hidden` / zero-opacity elements, flips `input[type=hidden]` to
   visible text, enables `disabled`/`readonly` controls, strips client-side validation
   (`required`, `pattern`, `maxlength`, form `novalidate`), and promotes lazy `data-src` images.
   Revealed elements get an amber dashed outline, and the scanner re-runs so the newly-exposed
   forms/buttons drop straight into your feature tree. Click again to restore the page exactly.
-- **Per-feature "tested" checkboxes** — turn the map straight into a testing checklist.
+- **Per-feature "tested" checkboxes**  turn the map straight into a testing checklist.
 - **Filter box** to search the tree.
-- **Per-origin persistence** — the map for each target is saved and restored automatically.
+- **Per-origin persistence**  the map for each target is saved and restored automatically.
 - **Export**: nested Markdown checklist (`- [ ] **Buy** \`button\``) or full JSON tree.
 - **Pause/Resume** recording; **Clear** per target.
 
